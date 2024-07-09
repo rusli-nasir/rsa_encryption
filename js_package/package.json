@@ -1,0 +1,39 @@
+{
+  "name": "js_app",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Rusli Nasir <rusli.nasir.m@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "ultra -r lint",
+    "lint:fix": "ultra -r lint:fix",
+    "test": "ultra -r test",
+    "typecheck": "ultra -r typecheck"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@react-native-async-storage/async-storage",
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-codegen",
+      "**/react-native-dev-menu",
+      "**/react-native-macos",
+      "**/react-native-windows"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-app": "^6.2.2",
+    "eslint-plugin-react-native": "^4.1.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3",
+    "ultra-runner": "^3.10.5"
+  }
+}
